@@ -33,8 +33,6 @@ def predict_api():
     return jsonify(output)
 
 if __name__ == "__main__":
-    app.run(debug=True)
-if __name__ == "__main__":
     from os import getenv
     port = int(getenv("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
