@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ML API - Predict Salary</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Arimo|Hind:300|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div class="background-animation"></div>
+
+  <div class="login">
+    <h1 class="fade-in-title">Predict <br><u>Salary Analysis</u></h1>
+
+    <form action="{{ url_for('predict') }}" method="post" class="fade-in-form">
+      <input type="text" name="experience" placeholder="Experience (in years)" required />
+      <input type="text" name="test_score" placeholder="Test Score (out of 10)" required />
+      <input type="text" name="interview_score" placeholder="Interview Score (out of 10)" required />
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br><br>
+    <h2 class="fade-in-prediction">{{ prediction_text }}</h2>
+  </div>
+
+  <footer class="creator-animation">Created by Suryansh Pandey</footer>
+</body>
+</html>
